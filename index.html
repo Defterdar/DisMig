@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Dismig!</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 <style>
+  body {
+    background-image: url(img/bg2.png);
+    background-position: center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+  }
     img {
         width: auto;
         height: 40vw;
+        filter: drop-shadow(30px 10px 4px #4b4b4d2a);
     }
     p {
-        font-size: 3vw;
+        font-size: 2.5vw;
         font-weight: bold;
-        margin-left: -20px;
-        margin-top: -22%;
-        max-width: 35vw;
+        margin-left: 101px;
+        margin-top: 2%;
+        max-width: 32vw;
     }
     button {    
         font-size: 1em;
@@ -34,14 +45,20 @@
         background-color: #04aa6d;
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     }
+    .speech-text {
+      font-family: "Fuzzy Bubbles", sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      text-shadow: 2px 2px;
+    }
 </style>
 <body>
 
 <div class="container-fluid align-items-center justify-content-center">
   <div class="row">
     <div class="col d-flex justify-content-end" style="top: 20%;"><img src="img/1.png" alt="" id="image" onclick="showSpeechBubble()"></div>
-    <div class="col d-flex align-items-center justify-content-center d-none" style="background-image: url(img/bg.png); background-size: contain; background-repeat: no-repeat; background-position: left;">
-      <p id="speech-text">I dare you to touch me!</p>
+    <div class="col d-flex align-items-center justify-content-center d-none" style="background-image: url(img/speech2.png); background-size: contain; background-repeat: no-repeat; background-position: left;">
+      <p class="speech-text" id="speech-text">I dare you to touch me!</p>
     </div>
   </div>
 </div>
